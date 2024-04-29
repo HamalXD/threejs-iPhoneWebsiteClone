@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import NavBar from "./components/NavBar";
+import Hero from "./components/Hero";
+import Highlights from "./components/Highlights";
 
 function App() {
   return (
-    <>
-      <p className="text-3xl bold underline text-center mt-10">This test works</p>
-    </>
-  )
+    <main className="bg-black">
+      <NavBar />
+      <Hero />
+      <Highlights />
+    </main>
+  );
 }
 
-export default App
+export default App;
