@@ -10,7 +10,7 @@ function App() {
       <NavBar />
       <Hero />
       <Highlights />
-      {/* <Model /> */}
+      <Model />
     </main>
   );
 }
