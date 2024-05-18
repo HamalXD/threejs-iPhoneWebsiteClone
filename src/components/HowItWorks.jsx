@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { chipImg, frameImg, frameVideo } from "../utils";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { animateWithGsap } from "../utils/animations";
 
 const HowItWorks = () => {
   const videoRef = useRef();
@@ -13,6 +14,13 @@ const HowItWorks = () => {
       opacity: 0,
       scale: 2,
       duration: 2,
+      ease: "power2.inOut",
+    });
+
+    animateWithGsap(".g_fadeIn", {
+      y: 0,
+      opacity: 1,
+      duration: 1,
       ease: "power2.inOut",
     });
   }, []);
@@ -53,6 +61,32 @@ const HowItWorks = () => {
                 <source src={frameVideo} type="video/mp4" />
               </video>
             </div>
+          </div>
+          <p className="text-grey font-semibold text-center mt-3">
+            Honkai: Star Rail
+          </p>
+        </div>
+        <div className="hiw-text-container">
+          <div className="flex flex-1 justify-center flex-col">
+            <p className="hiw-text g_fadeIn">
+              A17 Pro chip is the most powerful chip ever in a smartphone.{" "}
+              <span className="text-white">
+                Best Graphics performance by far.
+              </span>
+            </p>
+            <p className="hiw-text g_fadeIn">
+              Mobile{" "}
+              <span className="text-white">
+                Games will look and feel so immersive{" "}
+              </span>
+              you'll forget you're playing on a phone.
+            </p>
+          </div>
+
+          <div className="flex-1 flex justify-center flex-col g_fadeIn">
+            <p className="hiw-text">New</p>
+            <p className="hiw-bigtext">Pro-class GPU</p>
+            <p className="hiw-text">With 6 cores</p>
           </div>
         </div>
       </div>
